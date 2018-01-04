@@ -1,0 +1,14 @@
+sudo: false
+language: python
+python: 3.6
+
+services:
+    - postgresql
+
+script:
+    - which pg_ctl
+    - echo $PATH
+    - pg_config --bindir
+    - ls -lh /usr/lib/postgresql/
+    - ls -lh /usr/lib/postgresql/10/bin/
+    - ls -lh /usr/lib/postgresql/10/bin/pg_ctl
